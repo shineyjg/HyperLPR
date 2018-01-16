@@ -1,3 +1,15 @@
+#  added by Vincent Yang (shineyjg@gmail.com)
+the project is forked from https://github.com/davidsandberg/facenet, the only file I add is in main.py
+
+this project is the submodule of https://github.com/shineyjg/CvLab
+
+## run dependency
+  redis
+  the redis parameters must be configured before running. see main.py
+
+## run
+  python main.py
+
 # High Accuracy Chinese Plate Recognition Framework
 
 ### 介绍

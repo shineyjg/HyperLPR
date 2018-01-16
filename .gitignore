@@ -1,0 +1,6 @@
+.DS_Store
+.thumbs.db
+.vscode
+0.jpg
+cache
+__pycache__

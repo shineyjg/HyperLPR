@@ -144,6 +144,15 @@ def searchOptimalCuttingPoint(rgb,res_map,start,width_boundingbox,interval_range
                 p7 = p6 + width_boundingbox +refine
                 if p7>=length:
                     continue
+                p1 = int(p1)
+                p2 = int(p2)
+                p3 = int(p3)
+                p4 = int(p4)
+                p5 = int(p5)
+                p6 = int(p6)
+                p7 = int(p7)
+                # print('p1-p7', p1,p2, p3, p4, p5, p6, p7)
+                # print('res_map', res_map)
                 score = res_map[p1][2]*3 -(res_map[p3][1]+res_map[p4][1]+res_map[p5][1]+res_map[p6][1]+res_map[p7][1])+7
                 # print score
                 score_list.append([score,[p1,p2,p3,p4,p5,p6,p7]])
@@ -280,9 +289,9 @@ def slidingWindowsEval(image):
             section = image[0:36, c_head:c_tail]
         elif x==len(cutting_pts)-1:
             end = cutting_pts[x]
-            diff = image.shape[1]-end
-            c_head = cutting_pts[x - 1]
-            c_tail = cutting_pts[x]
+            diff = int(image.shape[1]-end)
+            c_head = int(cutting_pts[x - 1])
+            c_tail = int(cutting_pts[x])
             if diff<7 :
                 section = image[0:36, c_head-5:c_tail+5]
             else:
